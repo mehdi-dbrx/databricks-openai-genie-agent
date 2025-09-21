@@ -85,6 +85,3 @@ genie_agent = GenieAgent("space-123")
 result = genie_agent.execute(query="query")
 ```
 
-## Summary
-
-The OpenAI version is designed for **function calling** with structured JSON I/O, while the LangChain version is designed for **message-based workflows** with LangChain's Runnable interface.
