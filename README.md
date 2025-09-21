@@ -5,8 +5,6 @@
 This project adds GenieAgent support to the OpenAI integration package.  
 The original Databricks AI Bridge only provided GenieAgent for LangChain users.
 
-## Why This Was Needed
-
 The original AI Bridge had:
 ```python
 # Only available in databricks-langchain
