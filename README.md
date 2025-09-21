@@ -15,7 +15,7 @@ But no equivalent for OpenAI SDK users. This fills that gap.
 
 ### Core File :
 
-**`genie_agent.py`** - Core GenieAgent class with OpenAI tool integration
+[**`genie_agent.py`**](https://github.com/mehdi-dbrx/databricks-openai-genie-agent/blob/main/genie_agent.py) - Core GenieAgent class with OpenAI tool integration
 
 ## Usage
 
