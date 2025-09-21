@@ -98,6 +98,19 @@ genie_agent_description = "Your Genie Description"
 
 [GenieAgent: OpenAI vs LangChain Implementation Differences](https://github.com/mehdi-dbrx/databricks-openai-genie-agent/blob/main/implemenation-details.md)
 
+ Aspect | LangChain | OpenAI |
+|--------|-----------|--------|
+| **Return Format** | Message objects | JSON strings |
+| **Tool Integration** | Runnable interface | Function calling spec |
+| **Input Handling** | Message arrays | Single query strings |
+| **Schema Definition** | No explicit schemas | Pydantic models |
+| **Usage Pattern** | Chainable Runnable | Callable tool |
+| **Framework Integration** | LangChain ecosystem | OpenAI function calling |
+| **Output Structure** | Structured messages | Structured JSON with metadata |
+| **Error Handling** | Message-based errors | JSON error responses |
+| **Conversation Management** | Built into message flow | Explicit conversation IDs |
+| **Context Inclusion** | Message-based context | JSON field inclusion |
+
 ### Key Features
 
 - **OpenAI Compatible**: Uses OpenAI function calling specification
