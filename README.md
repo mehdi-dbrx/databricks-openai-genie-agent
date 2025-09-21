@@ -65,7 +65,7 @@ Send a request that will trigger the Genie Agent
 ```python
 from agent import AGENT
 
-AGENT.predict({"input": [{"role": "user", "content": "what is the Housing dataset about"}]})
+AGENT.predict({"input": [{"role": "user", "content": "what is the NAMCS dataset about"}]})
 ```
 
 ### Prerequisites
