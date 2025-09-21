@@ -86,15 +86,21 @@ genie_agent_description = "Your Genie Description"
 
 ## GenieAgent Implementation
 
-### Core Components
-
-#### GenieAgent Class
+### GenieAgent Class
 - **Input/Output Schemas**: Uses Pydantic models (`GenieAgentInput`, `GenieAgentOutput`) for type safety
 - **Tool Definition**: Creates OpenAI function calling spec with `_create_tool()`
 - **Execution**: `execute()` method calls Genie API and returns JSON string
 - **Conversation Management**: Supports conversation IDs for context continuity
 
-#### Implementation Details
+
+### Key Features
+
+- **OpenAI Compatible**: Uses OpenAI function calling specification
+- **Structured Output**: JSON responses with result, SQL, reasoning
+- **Error Handling**: Catches exceptions and returns error messages
+- **MLflow Tracing**: Integrated with MLflow for observability
+  
+### Implementation Details
 
 [GenieAgent: OpenAI vs LangChain Implementation Differences](https://github.com/mehdi-dbrx/databricks-openai-genie-agent/blob/main/implemenation-details.md)
 
@@ -111,10 +117,4 @@ genie_agent_description = "Your Genie Description"
 | **Conversation Management** | Built into message flow | Explicit conversation IDs |
 | **Context Inclusion** | Message-based context | JSON field inclusion |
 
-### Key Features
-
-- **OpenAI Compatible**: Uses OpenAI function calling specification
-- **Structured Output**: JSON responses with result, SQL, reasoning
-- **Error Handling**: Catches exceptions and returns error messages
-- **MLflow Tracing**: Integrated with MLflow for observability
 
