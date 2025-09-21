@@ -94,22 +94,9 @@ genie_agent_description = "Your Genie Description"
 - **Execution**: `execute()` method calls Genie API and returns JSON string
 - **Conversation Management**: Supports conversation IDs for context continuity
 
-#### Key Methods
+#### Implementation Details
 
-```python
-def _create_tool(self) -> Dict[str, Any]:
-    return {
-        "type": "function",
-        "function": {
-            "name": self.genie_agent_name.lower().replace(" ", "_"),
-            "description": self.description,
-            "parameters": GenieAgentInput.model_json_schema()
-        }
-    }
-
-def execute(self, query: str, conversation_id: Optional[str] = None) -> str:
-    # Calls Genie API and returns structured JSON response
-```
+[GenieAgent: OpenAI vs LangChain Implementation Differences](https://github.com/mehdi-dbrx/databricks-openai-genie-agent/blob/main/implemenation-details.md)
 
 ### Key Features
 
