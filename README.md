@@ -19,7 +19,16 @@ But no equivalent for OpenAI SDK users. This fills that gap.
 
 ## Usage
 
-Add this to your agent.py
+
+Add the **`genie_agent.py`** to your project 
+
+import it in your agent.py
+
+```python
+from genie_agent import GenieAgent
+```
+
+Instanciate youre Genie Agent
 
 ```python
 from genie_agent import GenieAgent
@@ -37,6 +46,8 @@ genie_agent = GenieAgent(
     ),
 )
 ```
+
+Add your Genie Agent to your toolset
 
 ```python
 # Add GenieAgent to tools
