@@ -21,7 +21,24 @@ But no equivalent for OpenAI SDK users. This fills that gap.
 
 ## Usage
 
-Add these lines after GenieAgent creation:
+Add this to your agent.py
+
+```python
+from genie_agent import GenieAgent
+
+GENIE_SPACE_ID = "your-genie-space-id"
+genie_agent_description = "Teva Genie"
+
+genie_agent = GenieAgent(
+    genie_space_id=GENIE_SPACE_ID,
+    genie_agent_name="Genie",
+    description=genie_agent_description,
+    client=WorkspaceClient(
+        host=os.getenv("DB_MODEL_SERVING_HOST_URL"),
+        token=os.getenv("DATABRICKS_GENIE_PAT"),
+    ),
+)
+```
 
 ```python
 # Add GenieAgent to tools
@@ -32,6 +49,7 @@ genie_tool_info = ToolInfo(
 )
 TOOL_INFOS.append(genie_tool_info)
 ```
+
 ### Prerequisites
 
 ```python
