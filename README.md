@@ -54,3 +54,37 @@ GENIE_SPACE_ID = "your-space-id-here"
 genie_agent_description = "Your Genie Description"
 ```
 
+## GenieAgent Implementation
+
+### Core Components
+
+#### GenieAgent Class
+- **Input/Output Schemas**: Uses Pydantic models (`GenieAgentInput`, `GenieAgentOutput`) for type safety
+- **Tool Definition**: Creates OpenAI function calling spec with `_create_tool()`
+- **Execution**: `execute()` method calls Genie API and returns JSON string
+- **Conversation Management**: Supports conversation IDs for context continuity
+
+#### Key Methods
+
+```python
+def _create_tool(self) -> Dict[str, Any]:
+    return {
+        "type": "function",
+        "function": {
+            "name": self.genie_agent_name.lower().replace(" ", "_"),
+            "description": self.description,
+            "parameters": GenieAgentInput.model_json_schema()
+        }
+    }
+
+def execute(self, query: str, conversation_id: Optional[str] = None) -> str:
+    # Calls Genie API and returns structured JSON response
+```
+
+### Key Features
+
+- **OpenAI Compatible**: Uses OpenAI function calling specification
+- **Structured Output**: JSON responses with result, SQL, reasoning
+- **Error Handling**: Catches exceptions and returns error messages
+- **MLflow Tracing**: Integrated with MLflow for observability
+
