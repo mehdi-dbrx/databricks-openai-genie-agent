@@ -59,6 +59,15 @@ genie_tool_info = ToolInfo(
 TOOL_INFOS.append(genie_tool_info)
 ```
 
+Test your agent :  
+Send a request that will trigger the Genie Agent
+
+```python
+from agent import AGENT
+
+AGENT.predict({"input": [{"role": "user", "content": "what is the Housing dataset about"}]})
+```
+
 ### Prerequisites
 
 ```python
@@ -73,6 +82,7 @@ LLM_ENDPOINT_NAME = "databricks-claude-sonnet-4"
 GENIE_SPACE_ID = "your-space-id-here"
 genie_agent_description = "Your Genie Description"
 ```
+
 
 ## GenieAgent Implementation
 
