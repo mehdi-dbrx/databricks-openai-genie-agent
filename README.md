@@ -15,12 +15,10 @@ from databricks_langchain import GenieAgent
 
 But no equivalent for OpenAI SDK users. This fills that gap.
 
-## Implementation
+### Core File :
 
-### Files Created
+**`genie_agent.py`** - Core GenieAgent class with OpenAI tool integration
 
-1. **`genie_agent.py`** - Core GenieAgent class with OpenAI tool integration
-2. **`agent.py`** - Modified agent code that includes GenieAgent as a tool
 
 ### Key Changes to Original Agent Code
 
