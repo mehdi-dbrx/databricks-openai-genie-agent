@@ -19,11 +19,6 @@ But no equivalent for OpenAI SDK users. This fills that gap.
 
 **`genie_agent.py`** - Core GenieAgent class with OpenAI tool integration
 
-
-### Key Changes to Original Agent Code
-
-
-
 ## Usage
 
 Add these lines after GenieAgent creation:
